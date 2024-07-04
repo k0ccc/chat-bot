@@ -47,4 +47,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 <details><summary>Документация:</summary>
 - ```3 из 5 без драмы.```</details>
 
+https://k0ccc.github.io/ Сайт лежит тут.
+
 
