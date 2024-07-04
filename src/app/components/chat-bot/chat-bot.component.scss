@@ -1,0 +1,53 @@
+
+.messages-container {
+  height: 450px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+  overflow-y: hidden;
+  width: 300px;
+  position: relative;
+}
+
+.message-area{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scroll-behavior: smooth;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: hsl(0 0% 50%);
+  height: 80%;
+}
+.message{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 10px 10px;
+}
+.right{
+  justify-content: end;
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px;
+}
+.left{
+  border-radius: 4px 4px 4px 0px;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
+}
+.avatar{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.user-interacton{
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px;
+  >textarea{
+    resize: none;
+  }
+  >button{
+    width: inherit;
+  }
+}

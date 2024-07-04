@@ -1,0 +1,31 @@
+<main class="messages-container" [style.maxHeight.%]="maxHeight">
+  <div data-test-id="message-area" class="message-area" >
+    <div class="message left">
+      <div class="avatar">👤: </div>
+      <p data-test-id="bot-message">Привет, чем могу помочь?</p>
+    </div>
+    @for (message of messages; track $index) {
+      <div class="message right">
+        <p data-test-id="user-message" class="message-command">
+          {{ message.command }}
+        </p>
+        <div class="avatar">:😸</div>
+      </div>
+      <div class="message left">
+        <div class="avatar">👤</div>
+        <p data-test-id="bot-message" class="bot-anwser">
+          {{ message.response }}
+        </p>
+      </div>
+    }
+    <div id="end" class="chat-offset"></div>
+  </div>
+  <form
+    class="user-interacton"
+    [formGroup]="inputForm"
+    (ngSubmit)="handleSubmit()"
+  >
+    <textarea id="input" name="input" rows="2" cols="33" data-test-id="chat-input" placeholder="Ваше сообщение" formControlName="input" ></textarea>
+    <button data-test-id="send-button" type="submit">➤</button>
+  </form>
+</main>
